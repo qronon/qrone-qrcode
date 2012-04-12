@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>qrone</groupId>
+  <artifactId>qrone-qrcode</artifactId>
+  <version>1.0</version>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>qrone</groupId>
+  		<artifactId>qrcode</artifactId>
+  		<version>0.50-beta10</version>
+  	</dependency>
+  </dependencies>
+  
+  <repositories>
+     <repository>
+        <id>qrone</id>
+        <url>http://mvn.qrone.org/</url>
+    </repository>
+  </repositories>
+  
+  <distributionManagement>
+    <repository>
+      <id>qrone</id>
+      <name>qrone.org Repository</name>
+      <url>dav:http://mvn.qrone.org</url>
+    </repository>
+  </distributionManagement>
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <scriptSourceDirectory>scripts</scriptSourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <outputDirectory>bin</outputDirectory>
+    <testOutputDirectory>bin-test</testOutputDirectory>
+    
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+            <source>1.6</source>
+            <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
